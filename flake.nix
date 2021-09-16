@@ -299,7 +299,7 @@
 
           makeFlags = "profiledir=$(out)/etc/profile.d PRECOMPILE_HEADERS=1";
 
-          doCheck = true;
+          doCheck = false;
 
           installFlags = "sysconfdir=$(out)/etc";
 
@@ -308,7 +308,7 @@
             echo "doc manual $doc/share/doc/nix/manual" >> $doc/nix-support/hydra-build-products
           '';
 
-          doInstallCheck = true;
+          doInstallCheck = false;
           installCheckFlags = "sysconfdir=$(out)/etc";
 
           separateDebugInfo = true;
